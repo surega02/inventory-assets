@@ -185,19 +185,19 @@ Foto menampilkan unit fisik dalam warna aslinya. Bingkai bersiku memberi foto ba
 
 Figtree Variable dipakai pada judul, isi, dan kontrol. Huruf monospace dipakai pada kode aset dan nomor seri yang tercatat. Angka tabular dipakai pada kode, waktu riwayat, dan paginasi.
 
-- **Judul halaman** memakai bobot 610 dan spasi huruf rapat. Ukuran judul daftar dan detail menyesuaikan lebar layar melalui dua skala fluida.
-- **Judul bagian** memakai bobot 650 (1.325rem), dengan judul indeks lebih kecil di HP (1.12rem). Nama aset di pratinjau lebih besar (1.7rem).
-- **Isi** memakai dasar 15px dengan tinggi baris 1.5. Nama aset dalam indeks lebih tebal dari nama kategori di bawahnya.
-- **Label** menurunkan kontras melalui tinta redup. Ruangan dan pemegang memakai label kecil dengan nilai yang lebih tebal. Petunjuk pencarian mengikuti ukuran dan warna metadata (.8125rem).
+- **Judul halaman** memakai bobot 610 dan spasi huruf rapat. Di HP, judul daftar dan detail memakai skala fluida 2–2.5rem.
+- **Judul bagian** memakai bobot 650 dengan ukuran 1.325rem di desktop dan 1.25rem di HP. Nama aset di pratinjau lebih besar (1.7rem).
+- **Isi** memakai dasar 15px di desktop dan 16px di HP, dengan tinggi baris 1.5. Nama aset dalam indeks lebih tebal dari nama kategori di bawahnya.
+- **Label** menurunkan kontras melalui tinta redup. Ruangan dan pemegang memakai label kecil dengan nilai yang lebih tebal. Petunjuk pencarian berukuran .8125rem di desktop dan .875rem di HP.
 
 **Aturan Pengenal Mudah Dipindai.** Pertahankan huruf monospace dan angka tabular pada kode aset saat pengenal berpindah dari daftar ke detail.
 
 ## Layout
 
-- Bingkai utama dibatasi 1320px. Lebarnya dikurangi 96px dari viewport pada layar lebar, 56px mulai dari 1180px ke bawah, dan 32px mulai dari 680px ke bawah.
+- Bingkai utama dibatasi 1320px. Lebarnya dikurangi 96px dari viewport pada layar lebar, 56px mulai dari 1180px ke bawah, dan 32px pada tata letak HP.
 - Di atas 1180px, indeks dan pratinjau terpilih berbagi satu kisi dengan jarak 24px. Pratinjau menempati sedikitnya 300px. Pada 1180px ke bawah, tautan nama aset langsung membuka detail.
-- Pada 680px ke bawah, filter menjadi dua kolom. Baris aset berubah menjadi susunan vertikal dengan kode dan status di atas, nama selebar baris, lalu ruangan dan pemegang berdampingan.
-- Detail menempatkan identitas dan foto dalam dua kolom pada layar lebar. Pada 680px ke bawah, identitas tampil sebelum foto dan riwayat menjadi satu kolom.
+- Tata letak HP berlaku sampai lebar 680px, serta pada layar sentuh mendatar sampai lebar 960px dan tinggi 480px. Filter menjadi dua kolom. Baris aset menempatkan kode dan status di atas, nama selebar baris, lalu ruangan dan pemegang berdampingan.
+- Detail menempatkan identitas dan foto dalam dua kolom pada layar lebar. Di HP, identitas tampil sebelum foto dan riwayat menjadi satu kolom.
 
 ## Elevation & Depth
 
@@ -211,15 +211,15 @@ Kontrol memakai sudut kecil (5px), panel indeks dan pratinjau memakai sudut lebi
 
 ### Tombol
 
-Tombol utama memakai bidang tinta arang dan teks putih. Tombol berbingkai memakai permukaan terang dan garis kontrol, lalu mendapat rona lilac saat disorot. Keduanya memakai tinggi minimum 42px dan padding 8px 14px. Tombol ikon berbentuk persegi, dengan garis dan radius yang sama.
+Tombol utama memakai bidang tinta arang dan teks putih. Tombol berbingkai memakai permukaan terang dan garis kontrol, lalu mendapat rona lilac saat disorot. Tinggi minimum tombol 42px di desktop dan 44px di HP. Tombol ikon berbentuk persegi, dengan garis dan radius yang sama.
 
 ### Pencarian dan filter
 
-Pencarian memakai bidang terang setinggi 47px dengan ikon kaca pembesar dan garis kontrol. Fokus mengelilingi wadah input. Filter memakai pilihan native berlabel dengan ikon chevron. Tinggi minimum pilihan meningkat dari 38px menjadi 42px pada HP.
+Pencarian memakai bidang terang setinggi 47px dengan ikon kaca pembesar dan garis kontrol. Fokus mengelilingi wadah input. Filter memakai pilihan native berlabel dengan ikon chevron. Tinggi minimum pilihan meningkat dari 38px menjadi 44px pada HP.
 
 ### Navigasi
 
-Identitas **assets** berada di kiri, navigasi Inventaris menandai halaman aktif dengan garis bawah ungu 2px, dan informasi akun berada di kanan. Bilah mengecil dari 65px menjadi 56px pada HP.
+Identitas **assets** berada di kiri, navigasi Inventaris menandai halaman aktif dengan garis bawah ungu 2px, dan informasi akun berada di kanan. Tinggi minimum bilah 65px di desktop dan 60px di HP.
 
 ### Penanda kondisi dan status
 
