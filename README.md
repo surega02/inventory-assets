@@ -30,6 +30,12 @@ pnpm build
 
 QR memakai format `assets:v1:<uuid-aset>` agar pemindahan ruangan, perubahan kode tampilan, dan perubahan domain aplikasi tidak mengubah identitas yang dicetak.
 
+## Serah terima dan lokasi aset
+
+Admin membuka **Kelola aset** dari detail aset untuk mengajukan serah terima, mencatat mutasi ruangan, atau mengonfirmasi pengembalian fisik ke Gudang. **Serah Terima** menampilkan pengajuan yang menunggu dan riwayatnya.
+
+Staf menerima atau menolak pengajuan dari **Serah Terima**. Penolakan memerlukan alasan. Setelah diterima, aset muncul di **Aset Saya** milik penerima. Mutasi hanya mengubah ruangan. Pengembalian memindahkan aset ke Gudang dan mengosongkan pemegang.
+
 ## Foto contoh
 
 Foto Dell XPS 13 berasal dari Tinh tế Photo dan dikodekan ulang ke WebP untuk pratinjau lokal. [Sumber dan lisensi CC0 1.0](https://commons.wikimedia.org/wiki/File:Dell_XPS_13_(2018)_(41250716281).jpg)

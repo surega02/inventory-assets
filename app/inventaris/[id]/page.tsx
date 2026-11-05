@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AssetLocation, ConditionMark, StatusMark } from "@/components/inventory/asset-meta";
+import { AssetOperations } from "@/components/inventory/asset-operations";
 import { AssetPhoto } from "@/components/inventory/photo";
 import { SettingsActionForm } from "@/components/settings/action-form";
 import { Button, buttonStyles } from "@/components/ui/button";
@@ -12,6 +13,7 @@ import {
 } from "@/lib/inventory";
 import { requireInventoryAccess } from "@/lib/inventory-access";
 import { assetPhotoSrc, inventoryAsset, inventoryHistory } from "@/lib/inventory-store";
+import { assetPendingHandover } from "@/lib/operations";
 import { archiveAsset } from "../actions";
 
 export const metadata: Metadata = { title: "Detail aset" };
@@ -35,7 +37,11 @@ export default async function AssetDetail({ params, searchParams }: {
   const [access, { id }, query] = await Promise.all([requireInventoryAccess(), params, searchParams]);
   const asset = await inventoryAsset(access, id);
   if (!asset) notFound();
-  const history = await inventoryHistory(access, asset);
+  const canOperate = access.kind === "admin" && asset.status === "active" && !!asset.updated_at;
+  const [history, pending] = await Promise.all([
+    inventoryHistory(access, asset),
+    access.kind === "admin" && canOperate ? assetPendingHandover(access.client, asset.id) : null,
+  ]);
   const filters = readFilters(query);
   const page = readPage(query);
   const result = param(query.hasil);
@@ -47,6 +53,8 @@ export default async function AssetDetail({ params, searchParams }: {
       </Link>
       {result === "ditambahkan" && <p className="settings-notice" role="status">Aset berhasil ditambahkan.</p>}
       {result === "diarsipkan" && asset.status === "archived" && <p className="settings-notice" role="status">Aset berhasil diarsipkan.</p>}
+      {result === "dikembalikan" && <p className="settings-notice" role="status">Pengembalian ke Gudang tercatat.</p>}
+      {result === "dipindahkan" && <p className="settings-notice" role="status">Mutasi ruangan tercatat.</p>}
       <div className="detail-grid">
         <section className="detail-identity" aria-labelledby="asset-title">
           <h1 id="asset-title">{asset.name}</h1>
@@ -68,7 +76,8 @@ export default async function AssetDetail({ params, searchParams }: {
           <Link href={inventoryHref(`/inventaris/${asset.id}/label`, filters, page)} className={buttonStyles("outline")}>
             <ScanLine size={18} aria-hidden="true" /> Cetak label QR
           </Link>
-          {access.kind === "admin" && asset.status === "active" && (
+          {canOperate && <a className="operation-link" href="#kelola-aset">Kelola aset</a>}
+          {access.kind === "admin" && asset.status === "active" && !pending && (
             <details className="asset-archive">
               <summary className={buttonStyles("outline")}><Archive size={17} aria-hidden="true" /> Arsipkan aset</summary>
               <div className="asset-archive-confirmation">
@@ -84,6 +93,7 @@ export default async function AssetDetail({ params, searchParams }: {
         </section>
         <AssetPhoto src={assetPhotoSrc(access, asset)} name={asset.name} demo={access.kind === "demo"} eager />
       </div>
+      {access.kind === "admin" && canOperate && <AssetOperations client={access.client} asset={asset} pending={pending} />}
       <section className="history" aria-labelledby="history-title">
         <h2 id="history-title">Riwayat aset</h2>
         {history.length ? (

@@ -42,7 +42,10 @@ export function AssetForm({ categories, rooms }: { categories: Option[]; rooms: 
     const submitter = (event.nativeEvent as SubmitEvent).submitter;
     const fields = new FormData(event.currentTarget, submitter);
     const file = fields.get("photo");
-    if (file instanceof File && file.size > assetPhotoMaxBytes) {
+    if (file instanceof File && file.name === "" && file.size === 0) {
+      // Pengurai multipart server dapat mengubah nama file kosong menjadi "undefined".
+      fields.delete("photo");
+    } else if (file instanceof File && file.size > assetPhotoMaxBytes) {
       setPhotoError(`Pilih foto berukuran maksimal ${assetPhotoMaxMiB} MiB.`);
       event.currentTarget.querySelector<HTMLInputElement>('input[name="photo"]')?.focus();
       return;
@@ -105,7 +108,7 @@ export function AssetForm({ categories, rooms }: { categories: Option[]; rooms: 
             {(props) => <textarea {...props} rows={3} maxLength={assetTextLimits.notes} />}
           </AssetField>
           <AssetField name="photo" label="Foto aset (opsional)" error={photoError ?? errors?.photo} wide
-            hint={`Satu JPEG, PNG, WebP, atau AVIF. Maksimal ${assetPhotoMaxMiB} MiB dan ${assetPhotoMaxMegapixels} megapiksel. Foto hanya dapat dibuka oleh Admin.`}>
+            hint={`Satu JPEG, PNG, WebP, atau AVIF. Maksimal ${assetPhotoMaxMiB} MiB dan ${assetPhotoMaxMegapixels} megapiksel. Foto dapat dibuka oleh Admin dan Staf pemegang aset.`}>
             {(props) => <input {...props} type="file" accept={Object.values(assetPhotoTypes).join(",")}
               onChange={() => setPhotoError(undefined)} />}
           </AssetField>

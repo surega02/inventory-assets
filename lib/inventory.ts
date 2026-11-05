@@ -34,6 +34,8 @@ export type Asset = {
   notes: string | null;
   purchase_date: string | null;
   acquisition_cost_idr: number | string | null;
+  holder_id?: string | null;
+  updated_at?: string;
 };
 
 type Snapshot = {

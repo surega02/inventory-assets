@@ -1,16 +1,22 @@
 import { assetPhotoBucket, assetPhotoTypes } from "@/lib/asset-fields";
-import { inventoryAccess } from "@/lib/inventory-access";
+import { accountAccess } from "@/lib/account-access";
+import { isId } from "@/lib/inventory";
 import { inventoryAsset } from "@/lib/inventory-store";
 
 const allowedTypes = new Set<string>(Object.values(assetPhotoTypes));
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
-  const access = await inventoryAccess();
-  if (access.kind !== "admin") return new Response(null, { status: 404 });
+  const access = await accountAccess();
+  const { id } = await params;
+  if (!isId(id) || access.kind !== "signed-in" || access.needsPassword || access.role === "superadmin") {
+    return new Response(null, { status: 404 });
+  }
   try {
-    const asset = await inventoryAsset(access, (await params).id);
-    if (!asset?.photo_path) return new Response(null, { status: 404 });
-    const { data, error } = await access.client.storage.from(assetPhotoBucket).download(asset.photo_path);
+    const path = access.role === "admin"
+      ? (await inventoryAsset({ kind: "admin", client: access.client }, id))?.photo_path
+      : (await access.client.rpc("inventory_staff_photo", { asset_id: id })).data;
+    if (typeof path !== "string" || !path) return new Response(null, { status: 404 });
+    const { data, error } = await access.client.storage.from(assetPhotoBucket).download(path);
     if (error || !data || !allowedTypes.has(data.type)) return new Response(null, { status: 404 });
     return new Response(data, {
       headers: {

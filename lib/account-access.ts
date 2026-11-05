@@ -39,7 +39,19 @@ export function accountDestination(account: SignedIn): string {
   if (account.needsPassword) return "/ganti-password";
   if (account.role === "superadmin") return "/pengaturan";
   if (account.role === "admin") return "/inventaris";
-  return "/masuk";
+  return "/aset-saya";
+}
+
+export async function requireOperationalAccess(role?: "admin" | "staff") {
+  const access = await accountAccess();
+  if (access.kind === "signed-in") {
+    if (!access.needsPassword && (access.role === "admin" || access.role === "staff") && (!role || access.role === role)) {
+      return { ...access, role: access.role };
+    }
+    redirect(accountDestination(access));
+  }
+  if (access.kind === "demo") redirect("/inventaris");
+  redirect(access.kind === "anonymous" ? "/masuk" : `/masuk?status=${access.kind}`);
 }
 
 export async function requireSuperadmin() {
