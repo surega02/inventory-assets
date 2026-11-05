@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T08:42:05.221Z",
+  "title": "Sistem desain assets",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Kertas hangat",
+        "tonalRamp": [
+          "oklch(15% 0.0029 84.56)",
+          "oklch(25% 0.0029 84.56)",
+          "oklch(36% 0.0029 84.56)",
+          "oklch(47% 0.0029 84.56)",
+          "oklch(58% 0.0029 84.56)",
+          "oklch(70% 0.0029 84.56)",
+          "oklch(82% 0.0029 84.56)",
+          "oklch(95% 0.0029 84.56)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Putih lembut",
+        "tonalRamp": [
+          "oklch(15% 0.0017 67.80)",
+          "oklch(25% 0.0017 67.80)",
+          "oklch(36% 0.0017 67.80)",
+          "oklch(47% 0.0017 67.80)",
+          "oklch(58% 0.0017 67.80)",
+          "oklch(70% 0.0017 67.80)",
+          "oklch(82% 0.0017 67.80)",
+          "oklch(95% 0.0017 67.80)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta arang",
+        "tonalRamp": [
+          "oklch(15% 0.0113 293.22)",
+          "oklch(25% 0.0113 293.22)",
+          "oklch(36% 0.0113 293.22)",
+          "oklch(47% 0.0113 293.22)",
+          "oklch(58% 0.0113 293.22)",
+          "oklch(70% 0.0113 293.22)",
+          "oklch(82% 0.0113 293.22)",
+          "oklch(95% 0.0113 293.22)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Tinta redup",
+        "tonalRamp": [
+          "oklch(15% 0.0165 303.86)",
+          "oklch(25% 0.0165 303.86)",
+          "oklch(36% 0.0165 303.86)",
+          "oklch(47% 0.0165 303.86)",
+          "oklch(58% 0.0165 303.86)",
+          "oklch(70% 0.0165 303.86)",
+          "oklch(82% 0.0165 303.86)",
+          "oklch(95% 0.0165 303.86)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Garis permukaan",
+        "tonalRamp": [
+          "oklch(15% 0.0035 354.70)",
+          "oklch(25% 0.0035 354.70)",
+          "oklch(36% 0.0035 354.70)",
+          "oklch(47% 0.0035 354.70)",
+          "oklch(58% 0.0035 354.70)",
+          "oklch(70% 0.0035 354.70)",
+          "oklch(82% 0.0035 354.70)",
+          "oklch(95% 0.0035 354.70)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Garis kontrol",
+        "tonalRamp": [
+          "oklch(15% 0.0081 319.45)",
+          "oklch(25% 0.0081 319.45)",
+          "oklch(36% 0.0081 319.45)",
+          "oklch(47% 0.0081 319.45)",
+          "oklch(58% 0.0081 319.45)",
+          "oklch(70% 0.0081 319.45)",
+          "oklch(82% 0.0081 319.45)",
+          "oklch(95% 0.0081 319.45)"
+        ]
+      },
+      "selected": {
+        "role": "primary",
+        "displayName": "Lilac pilihan",
+        "tonalRamp": [
+          "oklch(15% 0.0223 302.93)",
+          "oklch(25% 0.0223 302.93)",
+          "oklch(36% 0.0223 302.93)",
+          "oklch(47% 0.0223 302.93)",
+          "oklch(58% 0.0223 302.93)",
+          "oklch(70% 0.0223 302.93)",
+          "oklch(82% 0.0223 302.93)",
+          "oklch(95% 0.0223 302.93)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Ungu tinta",
+        "tonalRamp": [
+          "oklch(15% 0.1191 299.52)",
+          "oklch(25% 0.1191 299.52)",
+          "oklch(36% 0.1191 299.52)",
+          "oklch(47% 0.1191 299.52)",
+          "oklch(58% 0.1191 299.52)",
+          "oklch(70% 0.1191 299.52)",
+          "oklch(82% 0.1191 299.52)",
+          "oklch(95% 0.1191 299.52)"
+        ]
+      },
+      "accent-surface": {
+        "role": "primary",
+        "displayName": "Lilac pucat",
+        "tonalRamp": [
+          "oklch(15% 0.0155 306.41)",
+          "oklch(25% 0.0155 306.41)",
+          "oklch(36% 0.0155 306.41)",
+          "oklch(47% 0.0155 306.41)",
+          "oklch(58% 0.0155 306.41)",
+          "oklch(70% 0.0155 306.41)",
+          "oklch(82% 0.0155 306.41)",
+          "oklch(95% 0.0155 306.41)"
+        ]
+      },
+      "pressed": {
+        "role": "neutral",
+        "displayName": "Arang terang",
+        "tonalRamp": [
+          "oklch(15% 0.0181 303.56)",
+          "oklch(25% 0.0181 303.56)",
+          "oklch(36% 0.0181 303.56)",
+          "oklch(47% 0.0181 303.56)",
+          "oklch(58% 0.0181 303.56)",
+          "oklch(70% 0.0181 303.56)",
+          "oklch(82% 0.0181 303.56)",
+          "oklch(95% 0.0181 303.56)"
+        ]
+      },
+      "inverse-ink": {
+        "role": "neutral",
+        "displayName": "Tinta putih",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0)",
+          "oklch(25% 0.0000 0)",
+          "oklch(36% 0.0000 0)",
+          "oklch(47% 0.0000 0)",
+          "oklch(58% 0.0000 0)",
+          "oklch(70% 0.0000 0)",
+          "oklch(82% 0.0000 0)",
+          "oklch(95% 0.0000 0)"
+        ]
+      },
+      "good": {
+        "role": "secondary",
+        "displayName": "Hijau kondisi baik",
+        "tonalRamp": [
+          "oklch(15% 0.0619 162.91)",
+          "oklch(25% 0.0619 162.91)",
+          "oklch(36% 0.0619 162.91)",
+          "oklch(47% 0.0619 162.91)",
+          "oklch(58% 0.0619 162.91)",
+          "oklch(70% 0.0619 162.91)",
+          "oklch(82% 0.0619 162.91)",
+          "oklch(95% 0.0619 162.91)"
+        ]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "Oker rusak ringan",
+        "tonalRamp": [
+          "oklch(15% 0.1010 66.21)",
+          "oklch(25% 0.1010 66.21)",
+          "oklch(36% 0.1010 66.21)",
+          "oklch(47% 0.1010 66.21)",
+          "oklch(58% 0.1010 66.21)",
+          "oklch(70% 0.1010 66.21)",
+          "oklch(82% 0.1010 66.21)",
+          "oklch(95% 0.1010 66.21)"
+        ]
+      },
+      "danger": {
+        "role": "secondary",
+        "displayName": "Merah tua rusak berat",
+        "tonalRamp": [
+          "oklch(15% 0.1199 25.86)",
+          "oklch(25% 0.1199 25.86)",
+          "oklch(36% 0.1199 25.86)",
+          "oklch(47% 0.1199 25.86)",
+          "oklch(58% 0.1199 25.86)",
+          "oklch(70% 0.1199 25.86)",
+          "oklch(82% 0.1199 25.86)",
+          "oklch(95% 0.1199 25.86)"
+        ]
+      },
+      "preview-surface": {
+        "role": "neutral",
+        "displayName": "Putih lilac",
+        "tonalRamp": [
+          "oklch(15% 0.0034 325.60)",
+          "oklch(25% 0.0034 325.60)",
+          "oklch(36% 0.0034 325.60)",
+          "oklch(47% 0.0034 325.60)",
+          "oklch(58% 0.0034 325.60)",
+          "oklch(70% 0.0034 325.60)",
+          "oklch(82% 0.0034 325.60)",
+          "oklch(95% 0.0034 325.60)"
+        ]
+      },
+      "photo-mat": {
+        "role": "neutral",
+        "displayName": "Alas foto kelabu",
+        "tonalRamp": [
+          "oklch(15% 0.0045 314.80)",
+          "oklch(25% 0.0045 314.80)",
+          "oklch(36% 0.0045 314.80)",
+          "oklch(47% 0.0045 314.80)",
+          "oklch(58% 0.0045 314.80)",
+          "oklch(70% 0.0045 314.80)",
+          "oklch(82% 0.0045 314.80)",
+          "oklch(95% 0.0045 314.80)"
+        ]
+      },
+      "status-active-surface": {
+        "role": "neutral",
+        "displayName": "Abu status aktif",
+        "tonalRamp": [
+          "oklch(15% 0.0017 67.80)",
+          "oklch(25% 0.0017 67.80)",
+          "oklch(36% 0.0017 67.80)",
+          "oklch(47% 0.0017 67.80)",
+          "oklch(58% 0.0017 67.80)",
+          "oklch(70% 0.0017 67.80)",
+          "oklch(82% 0.0017 67.80)",
+          "oklch(95% 0.0017 67.80)"
+        ]
+      },
+      "status-active-ink": {
+        "role": "neutral",
+        "displayName": "Tinta status aktif",
+        "tonalRamp": [
+          "oklch(15% 0.0126 311.01)",
+          "oklch(25% 0.0126 311.01)",
+          "oklch(36% 0.0126 311.01)",
+          "oklch(47% 0.0126 311.01)",
+          "oklch(58% 0.0126 311.01)",
+          "oklch(70% 0.0126 311.01)",
+          "oklch(82% 0.0126 311.01)",
+          "oklch(95% 0.0126 311.01)"
+        ]
+      },
+      "status-archived-surface": {
+        "role": "neutral",
+        "displayName": "Kelabu keunguan",
+        "tonalRamp": [
+          "oklch(15% 0.0173 308.25)",
+          "oklch(25% 0.0173 308.25)",
+          "oklch(36% 0.0173 308.25)",
+          "oklch(47% 0.0173 308.25)",
+          "oklch(58% 0.0173 308.25)",
+          "oklch(70% 0.0173 308.25)",
+          "oklch(82% 0.0173 308.25)",
+          "oklch(95% 0.0173 308.25)"
+        ]
+      },
+      "status-archived-ink": {
+        "role": "neutral",
+        "displayName": "Tinta status diarsipkan",
+        "tonalRamp": [
+          "oklch(15% 0.0505 307.90)",
+          "oklch(25% 0.0505 307.90)",
+          "oklch(36% 0.0505 307.90)",
+          "oklch(47% 0.0505 307.90)",
+          "oklch(58% 0.0505 307.90)",
+          "oklch(70% 0.0505 307.90)",
+          "oklch(82% 0.0505 307.90)",
+          "oklch(95% 0.0505 307.90)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Judul daftar",
+        "purpose": "Identitas halaman inventaris."
+      },
+      "display-detail": {
+        "displayName": "Judul detail",
+        "purpose": "Nama aset pada lembar detail."
+      },
+      "headline": {
+        "displayName": "Judul bagian",
+        "purpose": "Tajuk indeks dan riwayat."
+      },
+      "title": {
+        "displayName": "Nama pratinjau",
+        "purpose": "Nama aset pada panel pratinjau."
+      },
+      "body": {
+        "displayName": "Isi",
+        "purpose": "Ukuran dasar teks antarmuka."
+      },
+      "label": {
+        "displayName": "Label fakta",
+        "purpose": "Nama atribut pada daftar fakta."
+      },
+      "control": {
+        "displayName": "Kontrol",
+        "purpose": "Teks tombol utama dan berbingkai."
+      },
+      "code": {
+        "displayName": "Kode",
+        "purpose": "Pengenal aset dan nomor seri yang tercatat."
+      },
+      "condition": {
+        "displayName": "Kondisi",
+        "purpose": "Nama kondisi di samping titik berwarna."
+      },
+      "status": {
+        "displayName": "Status",
+        "purpose": "Teks ringkas di dalam pil status."
+      }
+    },
+    "breakpoints": [
+      {
+        "name": "indeks-tanpa-pratinjau",
+        "value": "1180px"
+      },
+      {
+        "name": "susunan-hp",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tombol utama",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Aksi utama untuk menerapkan pencarian atau membuka detail.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\">Terapkan</button>",
+      "css": ".ds-btn-primary, .ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; gap: 8px; padding: 8px 14px; border: 1px solid transparent; border-radius: var(--radius-control, 5px); font: 650 .875rem/1.2 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); cursor: pointer; text-decoration: none; white-space: nowrap; } .ds-btn-primary:focus-visible, .ds-btn-outline:focus-visible { outline: 2px solid var(--color-accent, #563982); outline-offset: 3px; } .ds-btn-primary:disabled, .ds-btn-outline:disabled { opacity: .65; cursor: not-allowed; } .ds-btn-primary { background: var(--color-ink, #222127); color: #fff; } .ds-btn-primary:hover { background: var(--color-pressed, #38343e); }"
+    },
+    {
+      "name": "Tombol berbingkai",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Aksi pendamping seperti ekspor atau membuka label QR.",
+      "html": "<button type=\"button\" class=\"ds-btn-outline\"><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/><path d=\"M12 15V3\"/></svg> Ekspor Excel</button>",
+      "css": ".ds-btn-primary, .ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; gap: 8px; padding: 8px 14px; border: 1px solid transparent; border-radius: var(--radius-control, 5px); font: 650 .875rem/1.2 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); cursor: pointer; text-decoration: none; white-space: nowrap; } .ds-btn-primary:focus-visible, .ds-btn-outline:focus-visible { outline: 2px solid var(--color-accent, #563982); outline-offset: 3px; } .ds-btn-primary:disabled, .ds-btn-outline:disabled { opacity: .65; cursor: not-allowed; } .ds-btn-outline { color: var(--color-ink, #222127); background: var(--color-surface, #fffefd); border-color: var(--color-field-border, #ccc8cd); } .ds-btn-outline:hover { background: var(--color-accent-surface, #f3eef9); border-color: #b8a9cb; }"
+    },
+    {
+      "name": "Pencarian aset",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Kolom pencarian berikon dengan petunjuk cakupan.",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.35-4.35\"/></svg><input type=\"search\" aria-label=\"Cari aset\" aria-describedby=\"ds-search-help\" placeholder=\"Cari kode atau nama\" /></label><p class=\"ds-search-help\" id=\"ds-search-help\">Nomor seri dan pemegang juga bisa dicari.</p>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 11px; height: 47px; padding-inline: 13px; border: 1px solid var(--color-field-border, #ccc8cd); border-radius: var(--radius-control, 5px); background: var(--color-surface, #fffefd); color: var(--color-muted, #625e68); } .ds-search:focus-within { outline: 2px solid var(--color-accent, #563982); outline-offset: 2px; } .ds-search svg { flex: none; } .ds-search input { min-width: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; color: var(--color-ink, #222127); caret-color: var(--color-accent, #563982); font: 400 .9375rem/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-search input:focus { outline: none; } .ds-search input::placeholder { color: var(--color-muted, #625e68); opacity: 1; } .ds-search-help { margin: 4px 0 10px; color: var(--color-muted, #625e68); font: 400 .8125rem/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } @media (max-width: 680px) { .ds-search { padding-inline: 9px; gap: 6px; } .ds-search input { font-size: 1rem; } }"
+    },
+    {
+      "name": "Filter berlabel",
+      "kind": "input",
+      "refersTo": "select-filter",
+      "description": "Pilihan native untuk menyaring kategori, ruangan, kondisi, atau status.",
+      "html": "<label class=\"ds-filter\">Kategori<span class=\"ds-select-shell\"><select><option>Semua kategori</option><option>Perangkat IT</option><option>Furnitur</option></select><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></label>",
+      "css": ".ds-filter { display: grid; gap: 4px; max-width: 175px; color: var(--color-muted, #625e68); font: 620 .78rem/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-select-shell { display: block; position: relative; } .ds-select-shell select { width: 100%; min-height: 38px; padding: 6px 27px 6px 10px; appearance: none; color: var(--color-ink, #222127); background: var(--color-surface, #fffefd); border: 1px solid var(--color-field-border, #ccc8cd); border-radius: var(--radius-control, 5px); font: 470 .875rem/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); text-overflow: ellipsis; } .ds-select-shell select:focus-visible { outline: 2px solid var(--color-accent, #563982); outline-offset: 3px; } .ds-select-shell svg { position: absolute; inset: 50% 9px auto auto; transform: translateY(-50%); pointer-events: none; } @media (max-width: 680px) { .ds-select-shell select { min-height: 42px; } }"
+    },
+    {
+      "name": "Navigasi aktif",
+      "kind": "nav",
+      "refersTo": "nav-current",
+      "description": "Bilah merek dan tautan inventaris bergaris bawah.",
+      "html": "<div class=\"ds-site-header\"><a class=\"ds-brand\" href=\"#inventaris\" aria-label=\"assets · Inventaris\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.45\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M22 12h-4M6 12H2M12 6V2m0 20v-4\"/></svg><span>assets</span></a><nav aria-label=\"Navigasi utama\"><a class=\"ds-nav-current\" href=\"#inventaris\" aria-current=\"true\">Inventaris</a></nav></div>",
+      "css": ".ds-site-header { display: flex; align-items: stretch; min-height: 65px; gap: 44px; border-bottom: 1px solid var(--color-line, #dedbdc); background: var(--color-surface, #fffefd); color: var(--color-ink, #222127); font: 400 15px/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-site-header nav { display: flex; align-items: stretch; } .ds-brand { display: inline-flex; align-items: center; gap: 9px; color: inherit; font-size: 1.72rem; line-height: 1; font-weight: 720; letter-spacing: -.04em; text-decoration: none; } .ds-brand svg { flex: none; } .ds-nav-current { display: grid; place-items: center; position: relative; padding-inline: 3px; color: inherit; font-weight: 670; text-decoration: none; } .ds-nav-current::after { content: \"\"; position: absolute; inset: auto 0 -1px; height: 2px; background: var(--color-accent, #563982); } .ds-nav-current:focus-visible, .ds-brand:focus-visible { outline: 2px solid var(--color-accent, #563982); outline-offset: 3px; } @media (max-width: 680px) { .ds-site-header { min-height: 56px; gap: 21px; } .ds-brand { font-size: 1.45rem; gap: 6px; } .ds-brand svg { width: 19px; } .ds-nav-current { font-size: .8125rem; } }"
+    },
+    {
+      "name": "Status inventaris",
+      "kind": "chip",
+      "refersTo": "status-active",
+      "description": "Pil berlabel Aktif atau Diarsipkan.",
+      "html": "<span class=\"ds-status\">Aktif</span> <span class=\"ds-status ds-status-archived\">Diarsipkan</span>",
+      "css": ".ds-status { display: inline-block; padding: 3px 7px; border-radius: 99px; background: #eeedec; color: #4e4a51; font: 660 .6875rem/1.15 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); white-space: nowrap; } .ds-status-archived { background: #e9e3ef; color: #574865; }"
+    },
+    {
+      "name": "Kondisi fisik",
+      "kind": "custom",
+      "refersTo": "condition-good",
+      "description": "Titik dan teks berwarna untuk tiga kondisi fisik.",
+      "html": "<span class=\"ds-condition ds-good\">Baik</span> <span class=\"ds-condition ds-warning\">Rusak Ringan</span> <span class=\"ds-condition ds-danger\">Rusak Berat</span>",
+      "css": ".ds-condition { display: inline-flex; align-items: baseline; gap: 6px; color: var(--ds-condition-ink); font: 650 .75rem/1.25 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-condition::before { content: \"\"; width: 6px; height: 6px; flex: none; border-radius: 50%; background: currentColor; } .ds-good { --ds-condition-ink: var(--color-good, #35634e); } .ds-warning { --ds-condition-ink: var(--color-warning, #83500d); } .ds-danger { --ds-condition-ink: var(--color-danger, #953d38); }"
+    },
+    {
+      "name": "Pratinjau aset",
+      "kind": "card",
+      "refersTo": "asset-preview",
+      "description": "Panel terpilih dengan identitas, foto, fakta, dan tindakan.",
+      "html": "<aside class=\"ds-preview\" aria-label=\"Pratinjau aset terpilih\"><div class=\"ds-preview-top\"><span class=\"ds-code\">000131</span><span class=\"ds-status\">Aktif</span></div><h2>Monitor Dell P2422H</h2><div class=\"ds-preview-category\">Perangkat IT <span class=\"ds-condition ds-good\">Baik</span></div><figure class=\"ds-photo\"><div class=\"ds-photo-mount\"><div class=\"ds-photo-mat\"><div class=\"ds-photo-empty\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 21 3 3m7 7-7 7m18-4.5-1.914-1.914a2 2 0 0 0-2.828 0L15 12\"/><path d=\"M21 15V5a2 2 0 0 0-2-2H9M3 9v10a2 2 0 0 0 2 2h10\"/></svg><span>Belum ada foto</span></div></div></div><figcaption>Foto aset</figcaption></figure><dl class=\"ds-location\"><div><dt>Ruangan tercatat</dt><dd>Ruang Finance</dd></div><div><dt>Pemegang aktif</dt><dd>Nadia Pratama</dd></div></dl><div class=\"ds-preview-actions\"><a class=\"ds-btn-primary\" href=\"#detail\">Lihat detail <svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7\"/><path d=\"M7 7h10v10\"/></svg></a><a class=\"ds-btn-outline\" href=\"#label\"><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 7V5a1 1 0 0 1 1-1h2m10 0h2a1 1 0 0 1 1 1v2m0 10v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 12h10\"/></svg> Label QR</a></div></aside>",
+      "css": ".ds-preview { min-width: 0; padding: var(--space-2, 16px); border: 1px solid var(--color-line, #dedbdc); border-radius: var(--radius-surface, 12px); background: #fcfafc; color: var(--color-ink, #222127); font: 400 15px/1.5 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-preview-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 7px; } .ds-code { font: 600 .82rem/1.5 var(--font-code, ui-monospace, \"Cascadia Mono\", Consolas, monospace); font-variant-numeric: tabular-nums; color: var(--color-accent, #563982); overflow-wrap: anywhere; } .ds-preview h2 { margin: 0; font-size: 1.7rem; line-height: 1.06; letter-spacing: -.022em; font-weight: 650; overflow-wrap: anywhere; } .ds-preview-category { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 5px; color: var(--color-muted, #625e68); font-size: .8125rem; } .ds-preview .ds-photo { margin-top: var(--space-2, 16px); } .ds-location { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: var(--space-2, 16px) 0 0; padding-block: 12px; border-block: 1px solid var(--color-line, #dedbdc); } .ds-location > div + div { border-inline-start: 1px solid var(--color-line, #dedbdc); padding-inline-start: 12px; } .ds-location dt { color: var(--color-muted, #625e68); font-size: .8125rem; font-weight: 520; } .ds-location dd { margin: 2px 0 0; font-size: .875rem; font-weight: 670; overflow-wrap: anywhere; } .ds-preview-actions { display: flex; gap: var(--space-1, 8px); margin-top: var(--space-2, 16px); } .ds-preview-actions .ds-btn-primary { flex: 1; justify-content: space-between; } .ds-btn-primary, .ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; gap: 8px; padding: 8px 14px; border: 1px solid transparent; border-radius: var(--radius-control, 5px); font: 650 .875rem/1.2 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); cursor: pointer; text-decoration: none; white-space: nowrap; } .ds-btn-primary:focus-visible, .ds-btn-outline:focus-visible { outline: 2px solid var(--color-accent, #563982); outline-offset: 3px; } .ds-btn-primary:disabled, .ds-btn-outline:disabled { opacity: .65; cursor: not-allowed; } .ds-btn-primary { background: var(--color-ink, #222127); color: #fff; } .ds-btn-primary:hover { background: var(--color-pressed, #38343e); } .ds-btn-outline { color: var(--color-ink, #222127); background: var(--color-surface, #fffefd); border-color: var(--color-field-border, #ccc8cd); } .ds-btn-outline:hover { background: var(--color-accent-surface, #f3eef9); border-color: #b8a9cb; } .ds-photo { min-width: 0; margin: 0; font-family: var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-photo-mount { position: relative; padding: 6px; } .ds-photo-mount::before, .ds-photo-mount::after { content: \"\"; position: absolute; width: 14px; height: 14px; pointer-events: none; } .ds-photo-mount::before { inset: 0 auto auto 0; border-top: 1px solid #82778f; border-left: 1px solid #82778f; } .ds-photo-mount::after { inset: auto 0 0 auto; border-right: 1px solid #82778f; border-bottom: 1px solid #82778f; } .ds-photo-mat { position: relative; aspect-ratio: 3 / 2; background: #efedf0; } .ds-photo-empty { display: grid; position: absolute; inset: 0; align-content: center; justify-items: center; gap: 7px; color: var(--color-muted, #625e68); font-size: .8125rem; } .ds-photo figcaption { margin: 5px 6px 0; color: var(--color-muted, #625e68); font-size: .75rem; text-align: right; } .ds-status { display: inline-block; padding: 3px 7px; border-radius: 99px; background: #eeedec; color: #4e4a51; font: 660 .6875rem/1.15 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); white-space: nowrap; } .ds-status-archived { background: #e9e3ef; color: #574865; } .ds-condition { display: inline-flex; align-items: baseline; gap: 6px; color: var(--ds-condition-ink); font: 650 .75rem/1.25 var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-condition::before { content: \"\"; width: 6px; height: 6px; flex: none; border-radius: 50%; background: currentColor; } .ds-good { --ds-condition-ink: var(--color-good, #35634e); } .ds-warning { --ds-condition-ink: var(--color-warning, #83500d); } .ds-danger { --ds-condition-ink: var(--color-danger, #953d38); }"
+    },
+    {
+      "name": "Bingkai foto aset",
+      "kind": "custom",
+      "refersTo": "asset-photo",
+      "description": "Alas foto bersiku yang menampilkan keadaan tanpa foto.",
+      "html": "<figure class=\"ds-photo\"><div class=\"ds-photo-mount\"><div class=\"ds-photo-mat\"><div class=\"ds-photo-empty\"><svg aria-hidden=\"true\" width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 21 3 3m7 7-7 7m18-4.5-1.914-1.914a2 2 0 0 0-2.828 0L15 12\"/><path d=\"M21 15V5a2 2 0 0 0-2-2H9M3 9v10a2 2 0 0 0 2 2h10\"/></svg><span>Belum ada foto</span></div></div></div><figcaption>Foto aset</figcaption></figure>",
+      "css": ".ds-photo { min-width: 0; margin: 0; font-family: var(--font-ui, \"Figtree Variable\", system-ui, sans-serif); } .ds-photo-mount { position: relative; padding: 6px; } .ds-photo-mount::before, .ds-photo-mount::after { content: \"\"; position: absolute; width: 14px; height: 14px; pointer-events: none; } .ds-photo-mount::before { inset: 0 auto auto 0; border-top: 1px solid #82778f; border-left: 1px solid #82778f; } .ds-photo-mount::after { inset: auto 0 0 auto; border-right: 1px solid #82778f; border-bottom: 1px solid #82778f; } .ds-photo-mat { position: relative; aspect-ratio: 3 / 2; background: #efedf0; } .ds-photo-empty { display: grid; position: absolute; inset: 0; align-content: center; justify-items: center; gap: 7px; color: var(--color-muted, #625e68); font-size: .8125rem; } .ds-photo figcaption { margin: 5px 6px 0; color: var(--color-muted, #625e68); font-size: .75rem; text-align: right; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Katalog Foto",
+    "overview": "Antarmuka assets mengambil bentuk katalog kerja. Bidang terang, teks gelap, dan garis tipis membantu Admin memindai identitas aset, ruangan, serta pemegang dalam satu alur baca.\n\nFoto menampilkan unit fisik dalam warna aslinya. Bingkai bersiku memberi foto batas yang jelas, sementara label kecil membedakan foto aset dan foto contoh.",
+    "keyCharacteristics": [
+      "Permukaan terang dengan garis tipis dan aksen lilac untuk orientasi.",
+      "Figtree untuk teks antarmuka, huruf monospace untuk pengenal, dan angka tabular untuk data yang dipindai berurutan.",
+      "Kondisi fisik dan status inventaris menggunakan penanda visual yang berbeda."
+    ],
+    "rules": [
+      {
+        "name": "Aturan Lilac untuk Orientasi",
+        "body": "Pakai lilac untuk pengenal, fokus, navigasi aktif, dan seleksi yang sedang ditampilkan.",
+        "section": "colors"
+      },
+      {
+        "name": "Aturan Pengenal Mudah Dipindai",
+        "body": "Pertahankan huruf monospace dan angka tabular pada kode aset saat pengenal berpindah dari daftar ke detail.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Lakukan tampilkan ruangan tercatat dan pemegang aktif sebagai dua fakta berlabel terpisah.",
+      "Lakukan pasangkan warna kondisi dengan nama kondisi yang terbaca.",
+      "Lakukan pertahankan warna alami dan proporsi foto aset."
+    ],
+    "donts": [
+      "Hindari penggunaan satu penanda visual untuk kondisi fisik dan status inventaris."
+    ]
+  }
+}

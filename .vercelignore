@@ -1,0 +1,6 @@
+.env*
+.impeccable/
+.next/
+*.tsbuildinfo
+supabase/.branches/
+supabase/.temp/

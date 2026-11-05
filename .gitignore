@@ -1,0 +1,58 @@
+# Environment files and local credentials
+.env*
+!/.env.example
+.envrc
+/.direnv/
+.npmrc
+.netrc
+.git-credentials
+credentials.json
+*service-account*.json
+superadmin-*.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.kdbx
+id_rsa*
+id_ed25519*
+
+# Dependencies, build output, and test reports
+node_modules/
+/.next/
+/out/
+/dist/
+*.tsbuildinfo
+/next-env.d.ts
+/coverage/
+/playwright-report/
+/test-results/
+*.log
+
+# Local Vercel and Supabase state
+/.vercel/
+/.supabase/
+/supabase/.temp/
+/supabase/.branches/
+/supabase/.env*
+
+# Local data and exports
+/backups/
+/exports/
+*.dump
+*.sqlite*
+*.db
+inventaris-aset*.xlsx
+
+# Impeccable working files
+/.impeccable/mocks/
+/.impeccable/questions/
+/.impeccable/review/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+/.idea/
+/.vscode/
