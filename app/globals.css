@@ -297,7 +297,7 @@ a.icon-button:hover, button.icon-button:hover { color: var(--color-accent); back
 .asset-entry-form legend { padding: 0; font-size: 1.325rem; line-height: 1.2; font-weight: 650; }
 .asset-entry-form fieldset > p { margin-top: 4px; }
 .asset-entry-form > .settings-error { margin: 0 0 16px; }
-.asset-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+.asset-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px 18px; }
 .asset-field-wide { grid-column: 1 / -1; }
 .asset-fields textarea { resize: vertical; }
 .asset-fields input[type="file"]::file-selector-button {

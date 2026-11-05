@@ -104,7 +104,7 @@ export function AssetForm({ categories, rooms }: { categories: Option[]; rooms: 
           <AssetField name="notes" label="Catatan" error={errors?.notes} wide>
             {(props) => <textarea {...props} rows={3} maxLength={assetTextLimits.notes} />}
           </AssetField>
-          <AssetField name="photo" label="Foto aset" error={photoError ?? errors?.photo} wide
+          <AssetField name="photo" label="Foto aset (opsional)" error={photoError ?? errors?.photo} wide
             hint={`Satu JPEG, PNG, WebP, atau AVIF. Maksimal ${assetPhotoMaxMiB} MiB dan ${assetPhotoMaxMegapixels} megapiksel. Foto hanya dapat dibuka oleh Admin.`}>
             {(props) => <input {...props} type="file" accept={Object.values(assetPhotoTypes).join(",")}
               onChange={() => setPhotoError(undefined)} />}
