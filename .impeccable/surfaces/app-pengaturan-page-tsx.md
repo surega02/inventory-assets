@@ -19,7 +19,7 @@ Superadmin mengelola akun Admin dan Staf, kategori, ruangan, dan tujuan pengemba
 
 **STORY.** Buka tab Akun, pilih pengelolaan akun atau master. Tinjau dampak reset dan penonaktifan sebelum menerapkan.
 
-**FIRST VIEWPORT.** Bilah assets, judul halaman, tab Akun, Kategori, Ruangan, lalu indeks. Panel tindakan berlabel berada di samping pada desktop dan mendahului daftar di HP. Tab Ruangan menunjukkan tujuan Gudang saat ini.
+**FIRST VIEWPORT.** Judul halaman, tab Akun, Kategori, Ruangan, lalu indeks. Navigasi utama berada di sidebar pada desktop dan di bawah pada HP. Panel tindakan berlabel berada di samping pada desktop dan mendahului daftar di HP. Tab Ruangan menunjukkan tujuan Gudang saat ini.
 
 **FORM.** Struktur tab dari brief yang disetujui. Code-first dalam sistem desain yang sudah ada.
 

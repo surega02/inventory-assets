@@ -169,7 +169,7 @@ Foto menampilkan unit fisik dalam warna aslinya. Bingkai bersiku memberi foto ba
 
 ### Primary
 
-- **Ungu tinta** (`accent`) muncul pada pengenal aset, tautan pendukung, garis navigasi aktif, dan cincin fokus.
+- **Ungu tinta** (`accent`) muncul pada pengenal aset, tautan pendukung, menu aktif, dan cincin fokus.
 - **Lilac pilihan** (`selected`) menandai baris yang terhubung dengan pratinjau desktop. **Lilac pucat** (`accent-surface`) mendukung sorotan tombol berbingkai dan penanda data contoh.
 
 ### Neutral
@@ -194,8 +194,8 @@ Figtree Variable dipakai pada judul, isi, dan kontrol. Huruf monospace dipakai p
 
 ## Layout
 
-- Bingkai utama dibatasi 1320px. Lebarnya dikurangi 96px dari viewport pada layar lebar, 56px mulai dari 1180px ke bawah, dan 32px pada tata letak HP.
-- Di atas 1180px, indeks dan pratinjau terpilih berbagi satu kisi dengan jarak 24px. Pratinjau menempati sedikitnya 300px. Pada 1180px ke bawah, tautan nama aset langsung membuka detail.
+- Bingkai utama dibatasi 1320px. Lebarnya dikurangi 96px dari ruang kerja pada layar lebar, 56px saat ruang kerja selebar 1180px atau kurang, dan 32px pada tata letak HP.
+- Saat ruang kerja lebih lebar dari 1180px, indeks dan pratinjau terpilih berbagi satu kisi dengan jarak 24px. Pratinjau menempati sedikitnya 300px. Pada ruang kerja yang lebih sempit, tautan nama aset langsung membuka detail.
 - Tata letak HP berlaku sampai lebar 680px, serta pada layar sentuh mendatar sampai lebar 960px dan tinggi 480px. Filter menjadi dua kolom. Baris aset menempatkan kode dan status di atas, nama selebar baris, lalu ruangan dan pemegang berdampingan.
 - Detail menempatkan identitas dan foto dalam dua kolom pada layar lebar. Di HP, identitas tampil sebelum foto dan riwayat menjadi satu kolom.
 
@@ -219,7 +219,7 @@ Pencarian memakai bidang terang setinggi 47px dengan ikon kaca pembesar dan gari
 
 ### Navigasi
 
-Identitas **assets** berada di kiri, navigasi Inventaris menandai halaman aktif dengan garis bawah ungu 2px, dan informasi akun berada di kanan. Tinggi minimum bilah 65px di desktop dan 60px di HP.
+Di desktop, identitas **assets**, menu peran, dan kontrol akun berada di sidebar kiri. Pada layar selebar 900px atau kurang dan HP mendatar, identitas dan akun berada di bagian atas, sedangkan menu berikon dan berlabel menetap di bawah. Permukaan lilac menandai menu aktif. Ruang tambahan di bawah konten menjaga footer dan tindakan tetap bisa dijangkau.
 
 ### Penanda kondisi dan status
 
