@@ -42,11 +42,24 @@ export function accountDestination(account: SignedIn): string {
   return "/aset-saya";
 }
 
-export async function requireOperationalAccess(role?: "admin" | "staff") {
+const operationalRoles = {
+  manage: ["admin", "superadmin"],
+  respond: ["staff"],
+  personal: ["staff", "superadmin"],
+} satisfies Record<string, AccountRole[]>;
+
+type OperationalPermission = keyof typeof operationalRoles;
+
+export function hasOperationalAccess(role: AccountRole, permission: OperationalPermission): boolean {
+  const roles: readonly AccountRole[] = operationalRoles[permission];
+  return roles.includes(role);
+}
+
+export async function requireOperationalAccess(permission?: OperationalPermission) {
   const access = await accountAccess();
   if (access.kind === "signed-in") {
-    if (!access.needsPassword && (access.role === "admin" || access.role === "staff") && (!role || access.role === role)) {
-      return { ...access, role: access.role };
+    if (!access.needsPassword && (!permission || hasOperationalAccess(access.role, permission))) {
+      return access;
     }
     redirect(accountDestination(access));
   }

@@ -20,7 +20,7 @@ export default async function StocktakeSessionPage({ params, searchParams }: {
   params: Promise<{ id: string }>;
   searchParams: Promise<Search>;
 }) {
-  const [{ client }, { id }, query] = await Promise.all([requireOperationalAccess("admin"), params, searchParams]);
+  const [{ client }, { id }, query] = await Promise.all([requireOperationalAccess("manage"), params, searchParams]);
   if (!isId(id)) notFound();
   const session = await stocktakeDetail(client, id);
   if (!session) notFound();

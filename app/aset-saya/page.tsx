@@ -11,7 +11,7 @@ import { staffAssetPage } from "@/lib/operations";
 export const metadata: Metadata = { title: "Aset Saya" };
 
 export default async function StaffAssets({ searchParams }: { searchParams: Promise<Search> }) {
-  const [{ client }, query] = await Promise.all([requireOperationalAccess("staff"), searchParams]);
+  const [{ client, role }, query] = await Promise.all([requireOperationalAccess("personal"), searchParams]);
   const { rows, page, total } = await staffAssetPage(client, readPage(query));
   return (
     <div className="operation-page">
@@ -35,8 +35,17 @@ export default async function StaffAssets({ searchParams }: { searchParams: Prom
         <section className="empty-state">
           <Package size={28} aria-hidden="true" />
           <h2>Belum ada aset yang Anda pegang</h2>
-          <p>Aset akan tampil setelah Anda menerima pengajuan serah terima.</p>
-          <Link className={buttonStyles("outline")} href="/serah-terima">Lihat Serah Terima</Link>
+          {role === "staff" ? (
+            <>
+              <p>Aset akan tampil setelah Anda menerima pengajuan serah terima.</p>
+              <Link className={buttonStyles("outline")} href="/serah-terima">Lihat Serah Terima</Link>
+            </>
+          ) : (
+            <>
+              <p>Lihat aset kantor dan pemegangnya di Inventaris.</p>
+              <Link className={buttonStyles("outline")} href="/inventaris">Buka Inventaris</Link>
+            </>
+          )}
         </section>
       )}
     </div>

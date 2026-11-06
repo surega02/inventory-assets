@@ -13,7 +13,7 @@ import { StocktakePagination } from "./pagination";
 export const metadata: Metadata = { title: "Stok Opname" };
 
 export default async function StocktakePage({ searchParams }: { searchParams: Promise<Search> }) {
-  const [{ client }, query] = await Promise.all([requireOperationalAccess("admin"), searchParams]);
+  const [{ client }, query] = await Promise.all([requireOperationalAccess("manage"), searchParams]);
   const history = param(query.tab) === "riwayat";
   const [{ rooms }, { sessions, page, pages }] = await Promise.all([
     inventoryOptions({ kind: "admin", client }, true),

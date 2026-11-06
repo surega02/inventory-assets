@@ -12,12 +12,13 @@ Admin bisa menemukan aset dan pemegangnya, mencatat serah terima dan perpindahan
 |---|---|---|---|
 | Pengaturan aplikasi dan pengelolaan akun | Ya | — | — |
 | Master kategori dan ruangan, termasuk penetapan Gudang | Ya | Baca | — |
-| Inventaris, foto, arsip, label QR, riwayat | — | Kelola | Lihat detail aset yang dipegang |
-| Pengajuan dan pembatalan serah terima | — | Ya | — |
-| Respons serah terima | — | Lihat hasil | Terima atau tolak pengajuan yang ditujukan kepadanya |
-| Pengembalian, mutasi ruangan, opname, export | — | Ya | — |
+| Inventaris, foto, arsip, label QR, riwayat | Kelola | Kelola | Lihat detail aset yang dipegang |
+| Pengajuan dan pembatalan serah terima | Ya | Ya | — |
+| Respons serah terima | Lihat hasil | Lihat hasil | Terima atau tolak pengajuan yang ditujukan kepadanya |
+| Pengembalian, mutasi ruangan, opname, ekspor | Ya | Ya | — |
+| Aset Saya | Lihat aset yang dipegang | — | Lihat aset yang dipegang |
 
-Pembagian master dan hak operasional di tabel adalah default implementasi. Menu utama mencakup **Pengaturan dan Akun** untuk Superadmin, **Inventaris**, **Serah Terima**, dan **Stok Opname** untuk Admin, serta **Aset Saya** dan **Serah Terima** untuk Staf.
+Superadmin dapat membuka semua menu utama. Menu Admin mencakup **Inventaris**, **Serah Terima**, dan **Stok Opname**. Menu Staf mencakup **Aset Saya** dan **Serah Terima**.
 
 ## Kebutuhan fungsional
 

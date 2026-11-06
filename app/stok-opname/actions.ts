@@ -21,7 +21,7 @@ function failure(code: string) {
 }
 
 export async function openStocktake(_previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess("admin");
+  const { client } = await requireOperationalAccess("manage");
   const room = form.get("ruangan");
   if (typeof room !== "string" || !isId(room)) return failure("stocktake_room_inactive");
   const { data, error } = await client.rpc("stocktake_open", { target_room: room });
@@ -31,7 +31,7 @@ export async function openStocktake(_previous: unknown, form: FormData) {
 }
 
 export async function confirmStocktake(id: string, assetId: string, checkedAt: string | null, _previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess("admin");
+  const { client } = await requireOperationalAccess("manage");
   const condition = form.get("kondisi");
   const notes = form.get("catatan");
   if (!isId(id) || !isId(assetId)) return failure("stocktake_asset_missing");
@@ -49,7 +49,7 @@ export async function confirmStocktake(id: string, assetId: string, checkedAt: s
 }
 
 export async function closeStocktake(id: string, _previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess("admin");
+  const { client } = await requireOperationalAccess("manage");
   if (!isId(id)) return failure("stocktake_session_missing");
   if (form.get("konfirmasi") !== "ya") return { message: "Centang konfirmasi untuk menutup sesi." };
   const unchecked = form.getAll("belum-diperiksa");

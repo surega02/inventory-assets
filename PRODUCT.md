@@ -14,7 +14,7 @@ Next.js App Router, TypeScript, Tailwind CSS, dan shadcn/ui. Target deployment a
 
 - **Admin** adalah pengguna utama. Ia mencari aset dan pemegangnya, mencatat serah terima dan perpindahan, mencocokkan inventaris dengan temuan fisik, dan mengunduh laporan. Saat kebutuhan desain bertabrakan, prioritaskan kelancaran pekerjaan Admin. MVP menyediakan satu akun Admin operasional dengan akses ke semua ruangan.
 - **Staf** melihat aset di **Aset Saya** serta menerima atau menolak pengajuan serah terima yang ditujukan kepadanya.
-- **Superadmin** mengelola akun, pengaturan aplikasi, kategori, dan ruangan, termasuk menetapkan Gudang.
+- **Superadmin** mengelola akun, pengaturan aplikasi, kategori, dan ruangan, termasuk menetapkan Gudang. Ia juga dapat menjalankan pekerjaan Admin dan membuka **Aset Saya** untuk melihat aset yang dipegangnya.
 
 ## Product Purpose
 
@@ -36,7 +36,7 @@ EgaAsset melanjutkan pencatatan aset berkode dari Excel dengan konfirmasi serah 
 - Satu aset dapat memiliki satu pengajuan **Menunggu**. Pemegang berubah saat penerima menekan **Terima**. Penolakan mewajibkan alasan. Admin dapat membatalkan pengajuan, memindahkan ruangan, dan mencatat pengembalian sesuai aturan transaksi masing-masing.
 - Stok opname menyimpan pembanding awal, hasil pemeriksaan, dan selisih lokasi atau kondisi. Admin mengonfirmasi aset yang belum diperiksa sebagai **Tidak Ditemukan** sebelum menutup sesi. Hasil sesi tertutup bersifat baca saja.
 - Ekspor Excel mencakup seluruh hasil filter inventaris atau satu sesi opname. Kode dan nomor seri diperlakukan sebagai teks agar nol di depan tetap utuh. Impor Excel, pengelolaan cabang, dan mutasi antar kantor berada di luar MVP.
-- Login internal memakai username dan password. Otorisasi diperiksa di server. Staf hanya dapat membuka aset yang sedang dipegangnya dan data minimum dari pengajuan yang ditujukan kepadanya. Harga perolehan, catatan internal, dan riwayat pemegang hanya tersedia bagi Admin.
+- Login internal memakai username dan password. Otorisasi diperiksa di server. Staf hanya dapat membuka aset yang sedang dipegangnya dan data minimum dari pengajuan yang ditujukan kepadanya. Harga perolehan, catatan internal, dan riwayat pemegang tersedia bagi Admin dan Superadmin.
 
 ## Brand Commitments
 

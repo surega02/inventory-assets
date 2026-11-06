@@ -4,7 +4,7 @@ import { requireOperationalAccess } from "@/lib/account-access";
 
 export const dynamic = "force-dynamic";
 
-export default async function StaffLayout({ children }: { children: ReactNode }) {
-  await requireOperationalAccess("staff");
-  return <OperationalShell role="staff" current="home">{children}</OperationalShell>;
+export default async function MyAssetsLayout({ children }: { children: ReactNode }) {
+  const { role } = await requireOperationalAccess("personal");
+  return <OperationalShell role={role} current="my-assets">{children}</OperationalShell>;
 }

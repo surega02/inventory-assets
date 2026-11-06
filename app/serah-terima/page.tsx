@@ -4,7 +4,7 @@ import Link from "next/link";
 import { OperationPagination } from "@/components/operation-pagination";
 import { SettingsActionForm } from "@/components/settings/action-form";
 import { Button, buttonStyles } from "@/components/ui/button";
-import { requireOperationalAccess } from "@/lib/account-access";
+import { hasOperationalAccess, requireOperationalAccess } from "@/lib/account-access";
 import { dateTimeFormat, param, readPage, type Search } from "@/lib/inventory";
 import { handoverPage, handoverStatuses, type Handover } from "@/lib/operations";
 import { resolveHandover } from "./actions";
@@ -73,7 +73,7 @@ function HandoverRow({ item, admin }: { item: Handover; admin: boolean }) {
 
 export default async function HandoverIndex({ searchParams }: { searchParams: Promise<Search> }) {
   const [access, query] = await Promise.all([requireOperationalAccess(), searchParams]);
-  const admin = access.role === "admin";
+  const admin = hasOperationalAccess(access.role, "manage");
   const history = param(query.tab) === "riwayat";
   const { rows, page, total } = await handoverPage(access.client, !history, readPage(query));
   const notice = notices.get(param(query.hasil));

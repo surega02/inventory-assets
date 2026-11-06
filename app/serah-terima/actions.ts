@@ -33,7 +33,7 @@ function refreshOperations() {
 }
 
 export async function requestHandover(assetId: string, updatedAt: string, requestId: string, _previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess("admin");
+  const { client } = await requireOperationalAccess("manage");
   const recipient = form.get("recipient");
   if (!isId(assetId) || !isId(requestId)) return failed("asset_missing");
   if (typeof recipient !== "string" || !isId(recipient)) return failed("handover_recipient_invalid");
@@ -46,7 +46,7 @@ export async function requestHandover(assetId: string, updatedAt: string, reques
 }
 
 export async function resolveHandover(requestId: string, decision: "accepted" | "rejected" | "cancelled", _previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess(decision === "cancelled" ? "admin" : "staff");
+  const { client } = await requireOperationalAccess(decision === "cancelled" ? "manage" : "respond");
   if (!isId(requestId)) return failed("handover_missing");
   const value = form.get("reason");
   const reason = typeof value === "string" ? value.trim() : "";
@@ -62,7 +62,7 @@ export async function resolveHandover(requestId: string, decision: "accepted" | 
 }
 
 export async function moveAsset(assetId: string, updatedAt: string, operation: "move" | "return", warehouseId: string | null, _previous: unknown, form: FormData) {
-  const { client } = await requireOperationalAccess("admin");
+  const { client } = await requireOperationalAccess("manage");
   if (!isId(assetId)) return failed("asset_missing");
   const room = form.get("room");
   if (operation === "move" && (typeof room !== "string" || !isId(room))) return failed("asset_room_inactive");

@@ -6,6 +6,6 @@ import "./stocktake.css";
 export const dynamic = "force-dynamic";
 
 export default async function StocktakeLayout({ children }: { children: ReactNode }) {
-  await requireOperationalAccess("admin");
-  return <OperationalShell role="admin" current="stocktake">{children}</OperationalShell>;
+  const { role } = await requireOperationalAccess("manage");
+  return <OperationalShell role={role} current="stocktake">{children}</OperationalShell>;
 }

@@ -14,7 +14,7 @@ export default async function StaffAssetDetail({ params, searchParams }: {
   params: Promise<{ id: string }>;
   searchParams: Promise<Search>;
 }) {
-  const [{ client }, { id }, query] = await Promise.all([requireOperationalAccess("staff"), params, searchParams]);
+  const [{ client }, { id }, query] = await Promise.all([requireOperationalAccess("personal"), params, searchParams]);
   if (!isId(id)) notFound();
   const asset = await staffAsset(client, id);
   if (!asset) notFound();

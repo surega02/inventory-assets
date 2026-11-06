@@ -1,5 +1,5 @@
 import { assetPhotoBucket, assetPhotoTypes } from "@/lib/asset-fields";
-import { accountAccess } from "@/lib/account-access";
+import { accountAccess, hasOperationalAccess } from "@/lib/account-access";
 import { isId } from "@/lib/inventory";
 import { inventoryAsset } from "@/lib/inventory-store";
 
@@ -8,11 +8,11 @@ const allowedTypes = new Set<string>(Object.values(assetPhotoTypes));
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const access = await accountAccess();
   const { id } = await params;
-  if (!isId(id) || access.kind !== "signed-in" || access.needsPassword || access.role === "superadmin") {
+  if (!isId(id) || access.kind !== "signed-in" || access.needsPassword) {
     return new Response(null, { status: 404 });
   }
   try {
-    const path = access.role === "admin"
+    const path = hasOperationalAccess(access.role, "manage")
       ? (await inventoryAsset({ kind: "admin", client: access.client }, id))?.photo_path
       : (await access.client.rpc("inventory_staff_photo", { asset_id: id })).data;
     if (typeof path !== "string" || !path) return new Response(null, { status: 404 });

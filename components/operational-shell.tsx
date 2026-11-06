@@ -4,32 +4,32 @@ import type { ReactNode } from "react";
 import { signOut } from "@/app/masuk/actions";
 import { Brand, Copyright } from "@/components/brand";
 
+const inventory = { key: "inventory", href: "/inventaris", label: "Inventaris", Icon: Boxes } as const;
 const handovers = { key: "handovers", href: "/serah-terima", label: "Serah Terima", Icon: ArrowLeftRight } as const;
+const stocktake = { key: "stocktake", href: "/stok-opname", label: "Stok Opname", Icon: ClipboardCheck } as const;
+const myAssets = { key: "my-assets", href: "/aset-saya", label: "Aset Saya", Icon: Package } as const;
+const settings = { key: "settings", href: "/pengaturan", label: "Pengaturan", Icon: Settings2 } as const;
 const navigation = {
-  admin: [
-    { key: "home", href: "/inventaris", label: "Inventaris", Icon: Boxes },
-    handovers,
-    { key: "stocktake", href: "/stok-opname", label: "Stok Opname", Icon: ClipboardCheck },
-  ],
-  staff: [{ key: "home", href: "/aset-saya", label: "Aset Saya", Icon: Package }, handovers],
-  superadmin: [{ key: "settings", href: "/pengaturan", label: "Pengaturan", Icon: Settings2 }],
+  admin: [inventory, handovers, stocktake],
+  staff: [myAssets, handovers],
+  superadmin: [settings, inventory, handovers, stocktake, myAssets],
 } as const;
 const roleLabels = { admin: "Admin", staff: "Staf", superadmin: "Superadmin" };
 
 export function OperationalShell({ role, current, demo = false, children }: {
   role: keyof typeof navigation;
-  current: "home" | "handovers" | "stocktake" | "settings";
+  current: (typeof navigation)[keyof typeof navigation][number]["key"];
   demo?: boolean;
   children: ReactNode;
 }) {
-  const destinations = navigation[role];
+  const destinations = demo ? navigation[role].slice(0, 1) : navigation[role];
   return (
     <div className="app-shell">
       <a href="#konten" className="skip-link">Lewati ke konten</a>
       <header className="app-rail">
         <Brand href={destinations[0].href} />
-        <nav className="app-nav" aria-label="Navigasi utama">
-          {(demo ? destinations.slice(0, 1) : destinations).map(({ key, href, label, Icon }) => (
+        <nav className="app-nav" aria-label="Navigasi utama" data-count={destinations.length}>
+          {destinations.map(({ key, href, label, Icon }) => (
             <Link key={key} href={href} aria-current={current === key ? "location" : undefined}>
               <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
               <span>{label}</span>
